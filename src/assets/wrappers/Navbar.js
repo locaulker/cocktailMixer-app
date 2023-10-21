@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const Wrapper = styled.nav`
   background: var(--white);
@@ -11,7 +11,7 @@ const Wrapper = styled.nav`
     padding: 1.5rem 2rem;
   }
   .logo {
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(1.5em, 3vw, 3rem);
     color: var(--primary-500);
     font-weight: 700;
     letter-spacing: 2px;
@@ -26,7 +26,8 @@ const Wrapper = styled.nav`
     color: var(--grey-900);
     padding: 0.5rem 0.5rem 0.5rem 0;
     transition: var(--transition);
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
   }
   .nav-link:hover {
     color: var(--primary-500);
@@ -34,6 +35,7 @@ const Wrapper = styled.nav`
   .active {
     color: var(--primary-500);
   }
+
   @media (min-width: 768px) {
     .nav-center {
       flex-direction: row;
@@ -45,6 +47,6 @@ const Wrapper = styled.nav`
       margin-top: 0;
     }
   }
-`;
+`
 
-export default Wrapper;
+export default Wrapper
