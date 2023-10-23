@@ -24,6 +24,14 @@ const Cocktail = () => {
     strInstructions: instructions
   } = singleDrink
 
+  const validIngredients = Object.keys(singleDrink)
+    .filter(
+      (key) => key.startsWith("strIngredient") && singleDrink[key] !== null
+    )
+    .map((key) => singleDrink[key])
+
+  // console.log(validIngredients)
+
   return (
     <Wrapper>
       <header>
@@ -50,6 +58,17 @@ const Cocktail = () => {
           <p>
             <span className="drink-data">Glass:</span>
             {glass}
+          </p>
+          <p>
+            <span className="drink-data">Ingredients:</span>
+            {validIngredients.map((item, index) => {
+              return (
+                <span className="ing" key={item}>
+                  {item}
+                  {index < validIngredients.length - 1 ? "," : ""}
+                </span>
+              )
+            })}
           </p>
           <p>
             <span className="drink-data">Instructions:</span>
